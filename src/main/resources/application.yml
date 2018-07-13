@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    continueOnError: true
+    url: jdbc:h2:file:~/testt4ttt6
+    username: sa
+    password:
+  h2:
+    console:
+      path: /h2
+      enabled: true
+  quartz:
+    jdbc:
+      schema: classpath:/org/schema.sql
+org:
+  quartz:
+    scheduler:
+      instanceName: application
+      instanceId: AUTO
+    threadPool:
+      threadCount: 5
+  job:
+    startDelay: 0
+    repeatInterval: 6000
+    description: Sample job
+    key: StatisticsJobata
+
